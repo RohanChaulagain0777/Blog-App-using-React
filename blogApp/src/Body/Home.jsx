@@ -15,6 +15,7 @@ import { Categories } from "@/collection/Catogories";
 import { useState, useEffect } from "react";
 import { Api_key } from "@/Api";
 import AOS from "aos";
+import Contact from "./Contact";
 
 
 const Home = () => {
@@ -48,7 +49,7 @@ const Home = () => {
   const filtered = results.filter(game => game.reviews_count > 500);
 
   return (
-    <div className="w-full px-4 md:px-8 mt-6">
+    <div className="w-full px-4 md:px-8 mt-6 ">
       <Swiper
         modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
         spaceBetween={20}
@@ -78,7 +79,7 @@ const Home = () => {
                 </h1>
 
                 <NavLink
-                  to={`/category/${item.name}`}
+                  to={`/${item.name}`}
                   aria-label={`Explore ${item.name}`}
                   className="w-fit bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
                 >
@@ -89,14 +90,14 @@ const Home = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="text-center my-10" data-aos="fade-up"
+      <div className="text-center my-10 h-[100vh]" data-aos="fade-up"
   data-aos-duration="1500" >
-        <h1 className="text-3xl font-bold mb-5">Featured Games</h1>
+        <h1 className="text-4xl font-bold mb-5">Featured Games</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
         {filtered.slice(0, 6).map((game) => (
           <div
             key={game.id}
-            className="bg-gray-900 rounded-xl overflow-hidden shadow-lg"
+            className="bg-gray-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
             <img
               src={game.background_image}

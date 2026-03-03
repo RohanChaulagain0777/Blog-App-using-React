@@ -22,8 +22,8 @@ const Contact = () => {
 
 
   return (
-    <div className='flex justify-center items-center flex-col gap-10 w-full mb-10'>
-      <h1 className='font-bold text-3xl tracking-tight '>Contact Us</h1>
+    <div className='flex justify-center items-center flex-col gap-10 w-full mb-10 h-[80vh]'>
+      <h1 className='font-bold text-4xl tracking-tight '>Contact us</h1>
       <div className='flex justify-between items-center gap-10 w-[80%]'>
         <form className='flex gap-8 flex-col' onSubmit={handleSubmit}>
           <input type="text" placeholder="UserName" value={name} onChange={(e) => setname(e.target.value)}  className=' py-3 px-4 rounded-2xl border border-black focus:ring-2 focus:ring-blue-500 outline-none dark:border-white dark:border-2  dark:text-white ' required/>

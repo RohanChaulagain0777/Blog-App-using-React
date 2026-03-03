@@ -8,6 +8,10 @@ import { useState,useEffect } from "react";
 import { MoveUpIcon } from "lucide-react";
 import Contact from "./Body/Contact";
 import Footer from "./Footer/Footer";
+import Horror from "./page/Horror";
+import Action from "./page/Action";
+import Sci_fi from "./page/Sci-Fi";
+import BestIndies  from "./page/BestIndies ";
 
 function App() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -39,6 +43,10 @@ function App() {
         <Route path="/" element={<><Home/> <Contact /></>} />
         <Route path="/about" element={<About />} />
         <Route path="/reviews" element={<Review />} />
+        <Route path="/Horror" element={<Horror />} />
+        <Route path="/Action" element={<Action />} />
+        <Route path="/Sci-Fi" element={<Sci_fi />} />
+        <Route path="/BestIndies" element={<BestIndies />} />
       </Routes>
       {isVisible && (
         <button onClick={scrollToTop} className="fixed bottom-6 right-6 bg-red-500 text-white p-3 rounded-full shadow-lg hover:scale-110 transition"><MoveUpIcon size={20}/></button>
