@@ -51,7 +51,7 @@ const Navbar = () => {
        Home
       </NavLink>
         <NavLink
-        to="/review"
+        to="/reviews"
         className={({ isActive }) =>`relative font-semibold after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-black dark:after:bg-white after:origin-left after:scale-x-0 after:transition-transform after:duration-300 ${isActive ? "after:scale-x-100" : "" }`}>
        Reviews
       </NavLink>
